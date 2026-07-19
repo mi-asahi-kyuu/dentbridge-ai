@@ -73,6 +73,12 @@ render_voice "dentist-end" "Kyoko" 170 \
 render_voice "app-en-end" "Shelley (英語（アメリカ）)" 184 \
   "Treatment is finished. Normal conversation translation has resumed."
 
+render_voice "narrator-codex" "Reed (英語（アメリカ）)" 184 \
+  "We built DentBridge A I with Codex as our engineering collaborator. Codex turned repeated iPad field tests into a hands-free state machine, local voice activity detection, safety gates, automated tests, and a production deployment."
+
+render_voice "narrator-gpt" "Reed (英語（アメリカ）)" 184 \
+  "At runtime, GPT five point six returns structured medical translations. It must preserve body parts, symptoms, negation, left and right, numbers, tooth positions, medications, and allergies. Deterministic checks block unsafe text before speech playback."
+
 render_voice "narrator-outro" "Reed (英語（アメリカ）)" 184 \
   "DentBridge A I translates only. It does not diagnose or make treatment decisions. Important medical details must always be confirmed by the dentist and patient."
 

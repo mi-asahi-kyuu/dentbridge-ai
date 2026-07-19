@@ -1,5 +1,5 @@
 export const VIDEO_FPS = 30;
-export const VIDEO_DURATION_SECONDS = 100;
+export const VIDEO_DURATION_SECONDS = 139;
 
 export type AudioCue = {
   readonly file: string;
@@ -26,7 +26,9 @@ export const AUDIO_CUES: readonly AudioCue[] = [
   { file: "app-en-pain.wav", start: 77.5, volume: 0.98 },
   { file: "dentist-end.wav", start: 80, volume: 1 },
   { file: "app-en-end.wav", start: 81.8, volume: 0.98 },
-  { file: "narrator-outro.wav", start: 87.5, volume: 1 },
+  { file: "narrator-codex.wav", start: 87.7, volume: 1 },
+  { file: "narrator-gpt.wav", start: 104.2, volume: 1 },
+  { file: "narrator-outro.wav", start: 124.5, volume: 1 },
 ] as const;
 
 export const CHIME_SECONDS = [21.1, 37.8, 64.8, 67.4, 74.2, 78, 82.4] as const;
@@ -49,5 +51,7 @@ export const SCENES = {
   openMouth: { from: 70.8, to: 75.8 },
   painCheck: { from: 75.4, to: 79.9 },
   endTreatment: { from: 79.5, to: 87.6 },
-  outro: { from: 87.1, to: 100 },
+  codex: { from: 87.1, to: 104.2 },
+  gpt: { from: 103.8, to: 124.4 },
+  outro: { from: 124, to: 139 },
 } satisfies Record<string, SceneWindow>;

@@ -29,6 +29,7 @@ import {
   fontFamily,
   palette,
 } from "./components/DemoUi";
+import {CodexScene, GptScene} from "./components/BuildWeekScenes";
 
 const clamp = {
   extrapolateLeft: "clamp" as const,
@@ -449,6 +450,8 @@ export function DentBridgeDemo() {
       <Scene window={SCENES.openMouth}><FixedPhraseScene kind="open" /></Scene>
       <Scene window={SCENES.painCheck}><FixedPhraseScene kind="pain" /></Scene>
       <Scene window={SCENES.endTreatment}><EndTreatmentScene /></Scene>
+      <Scene window={SCENES.codex}><CodexScene /></Scene>
+      <Scene window={SCENES.gpt}><GptScene /></Scene>
       <Scene window={SCENES.outro}><OutroScene /></Scene>
     </AbsoluteFill>
   );
