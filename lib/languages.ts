@@ -2,6 +2,10 @@ export const LANGUAGE_CODES = ["ja", "zh", "en", "ko", "vi"] as const;
 
 export type LanguageCode = (typeof LANGUAGE_CODES)[number];
 
+export type PatientLanguageCode = Exclude<LanguageCode, "ja">;
+
+export const DEFAULT_PATIENT_LANGUAGE: PatientLanguageCode = "en";
+
 export type LanguageDefinition = {
   code: LanguageCode;
   nativeName: string;

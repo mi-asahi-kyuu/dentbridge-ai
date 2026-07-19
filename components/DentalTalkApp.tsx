@@ -32,6 +32,7 @@ import { encodeMonoWav } from "@/lib/energy-vad";
 import { getCriticalConfirmationContent } from "@/lib/critical-confirmation";
 import { shouldRetryHttpStatus } from "@/lib/http-retry-policy";
 import {
+  DEFAULT_PATIENT_LANGUAGE,
   getLanguage,
   JA_CONSENT,
   PATIENT_LANGUAGES,
@@ -207,7 +208,7 @@ function microphoneErrorMessage(error: unknown) {
 
 export function DentalTalkApp({ pipelineMode, ttsProvider }: Props) {
   const [screen, setScreen] = useState<Screen>("start");
-  const [patientLanguage, setPatientLanguage] = useState<PatientLanguageCode>("zh");
+  const [patientLanguage, setPatientLanguage] = useState<PatientLanguageCode>(DEFAULT_PATIENT_LANGUAGE);
   const [consented, setConsented] = useState(false);
   const [machineState, setMachineState] = useState<HandsFreeState>("idle");
   const [mode, setMode] = useState<TreatmentSessionMode>("conversation");

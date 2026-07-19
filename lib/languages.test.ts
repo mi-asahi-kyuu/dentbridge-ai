@@ -1,7 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { getLanguage, isAllowedLanguage, languagePairLabel } from "./languages";
+import {
+  DEFAULT_PATIENT_LANGUAGE,
+  getLanguage,
+  isAllowedLanguage,
+  languagePairLabel,
+} from "./languages";
 
 describe("language configuration", () => {
+  it("defaults the public demo to English", () => {
+    expect(DEFAULT_PATIENT_LANGUAGE).toBe("en");
+    expect(getLanguage(DEFAULT_PATIENT_LANGUAGE).nativeName).toBe("English");
+  });
+
   it("accepts only configured language codes", () => {
     expect(["ja", "zh", "en", "ko", "vi"].every(isAllowedLanguage)).toBe(true);
     expect(isAllowedLanguage("fr")).toBe(false);
