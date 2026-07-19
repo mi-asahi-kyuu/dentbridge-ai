@@ -1,0 +1,51 @@
+{
+  "name": "dental-talk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5678",
+    "dev:https": "next dev -p 5678 -H 0.0.0.0 --experimental-https --experimental-https-key .certs/server.key --experimental-https-cert .certs/server.crt --experimental-https-ca .certs/dental-talk-local-ca.crt",
+    "cert:setup": "zsh scripts/setup-local-https.sh",
+    "cert:serve": "python3 -m http.server 5679 --bind 0.0.0.0 --directory .certs/public",
+    "build": "next build",
+    "start": "next start -p 5678",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "video:audio": "bash video/scripts/generate-demo-audio.sh",
+    "video:studio": "remotion studio video/index.ts",
+    "video:render": "remotion render video/index.ts DentBridgeDemo output/dentbridge-ai-demo-en-ja.mp4 --codec=h264 --crf=18",
+    "video:thumbnail": "remotion still video/index.ts DentBridgeDemo output/dentbridge-ai-demo-thumbnail.png --frame=90"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.491",
+    "@remotion/media": "4.0.491",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^24.10.9",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "ajv": "^8.20.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.2.10",
+    "jsdom": "^27.4.0",
+    "picomatch": "^4.0.5",
+    "remotion": "4.0.491",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0",
+    "zod": "4.3.6"
+  },
+  "overrides": {
+    "postcss": "8.5.19"
+  }
+}

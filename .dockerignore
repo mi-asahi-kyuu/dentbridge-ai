@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.env.*
+.certs
+.next
+node_modules
+coverage
+output
+video
+public/demo
+*.log
+*.tsbuildinfo
+.DS_Store
+README.md

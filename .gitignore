@@ -1,0 +1,29 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+
+# test output
+/coverage
+
+# generated demo media
+/output
+/public/demo
+
+# local environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# local HTTPS certificate authority and private keys
+/.certs
+
+# logs and OS files
+*.log
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
